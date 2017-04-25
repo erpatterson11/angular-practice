@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.internal-link {
+  height: 70px;
+}
+
+/*=============================
+        Nav Tab Selector
+=============================*/
+
+nav {
+  width: 100vw;
+  height: 70px;
+  background: #4fbcdc;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-basis: 1;
+  position: fixed;
+}
+
+.nav-menu-list {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  line-height: 22px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:0.5s;
+}
+
+a:focus {
+  background-color: #59fc48;
+  height: 80px;
+}
+
+.text-container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  background: #eee;
+}
+
+.selection-text {
+  color: #111;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  flex-grow: 1;
+}
+
+.selection-text span {
+  background: #aaa;
+  color:#eee;
+  display: inline-block;
+  padding: 10px;
+}
+
+
+/*=============================
+          Text Editor
+=============================*/
+
+
+.text-editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.text-edit-box {
+  text-align: center;
+  margin: 30px;
+  display: inline-block;
+  border: none;
+  width: 400px;
+  line-height: 34px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px #bbb inset;
+  font-size: 16px;
+  color: #8d9395;
+  font-weight: bold;
+  outline: none;
+}
+
+.text-editor p {
+  min-width: 40px;
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editable-text {
+  color: #aaa;
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+
+/*=============================
+          Order Form
+=============================*/
+
+.order-form-element {
+  width: 100vw;
+  min-height: 500px;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.order-form-container {
+  width: 525px;
+  min-height: 500px;
+  background: #4fbcdc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.order-form-container h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: 'Cookie', cursive;
+  text-transform: none;
+  font-size: 72px;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px #777;
+}
+
+.service-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.service {
+  width: 350px;
+  height: 70px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d23f4d;
+  margin: 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+a.active {
+  background-color: #59fc48;
+  height: 80px;
+}
+
+.order-total {
+  width: 350px;
+  height: 70px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border-top: #fff solid 1px;
+  padding-top: 5px;
+  margin-top: 10px;
+}

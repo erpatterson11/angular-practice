@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="practiceApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Angular Practice</title>
+  </head>
+
+
+  <body>
+    <section>
+      <nav class="{{ active }}" ng-click="$event.preventDefault()">
+          <ul class="nav-menu-list" >
+            <a href="#home" class="home" ng-click="active='home'">Home</a>
+            <a href="#text-editor" class="textEditor" ng-click="active='text Editor'">Text Editor</a>
+            <a href="#order-form" class="order-form" ng-click="active='services'">Services</a>
+            <a href="#" class="contact" ng-click="active='contact'">Contact</a>
+          </ul>
+      </nav>
+
+      <div class="text-container">
+        <div id="home" class="internal-link"></div>
+        <p class="selection-text" ng-hide="active">Choose a section</p>
+        <p class="selection-text" ng-show="active">You chose <span>{{ active }}</span></p>
+      </div>
+  </section>
+
+  <section ng-controller="textEditorCtrl" ng-click="hideEditor()" class="text-editor">
+    <div id="text-editor" class="internal-link"></div>
+    <textarea class="text-edit-box"  ng-click="$event.stopPropagation()" ng-show="editorShow" ng-model="editMe"></textarea>
+    <div class="editable-text" ng-click="$event.stopPropagation()">
+      <p ng-click="toggleEditor($event)">✎ {{ editMe }}</p>
+    </div>
+  </section>
+
+  <section ng-controller="orderFormCtrl" class="order-form-element">
+    <div id="order-form" class="internal-link"></div>
+    <div class="order-form-container">
+      <h1>Services</h1>
+      <ul class="service-item-container">
+        <a ng-repeat="service in services" ng-click="toggleActive(service)" ng-class="{active:service.active}" class="service">{{service.name}} <span>{{service.price | currency}}</span></a>
+      </ul>
+        <div class="order-total">Total <span> {{ total() | currency }} </span></div>
+    </div>
+  </section>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/navCtrl.js"></script>
+    <script src="js/textEditorCtrl.js"></script>
+    <script src="js/orderFormCtrl.js"></script>
+  </body>
+</html>
